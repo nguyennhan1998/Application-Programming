@@ -24,6 +24,12 @@ namespace Lession1 //package
              Console.WriteLine("Nhap vao mot so nguyen \n");
              no = Convert.ToInt32(Console.ReadLine());
              Console.WriteLine("so nguyen ban vua nhap la " + no);*/
+            dynamic x;//kieu du lieu dong
+            x = 20;//x la mot so nguyen
+            //Console.WriteLine(x+15);
+            
+                x = "xin chao";
+           // Console.WriteLine(x+15);
         }
 
         private static void TotalNumber()
