@@ -12,7 +12,7 @@ namespace Application_Programming
         private int qty;
         private string image;
         private string desc;
-        private List<string> gallery;
+        private List<string> gallery = new List<string>();
 
         public Product(int id, string name, float price, int qty, string image, string desc)
         {
@@ -31,12 +31,12 @@ namespace Application_Programming
 
         public string GetInformation()
         {
-            return "ID : " + id+
-                   "\nName: "+name+
-                   "\nPrice: "+price+
-                   "\nQty: "+qty+
-                   "\nimage: "+image+
-                   "\ndesc: "+desc
+            return "ID : " + id +
+                   "\nName: " + name +
+                   "\nPrice: " + price +
+                   "\nQty: " + qty +
+                   "\nimage: " + image +
+                   "\ndesc: " + desc
                 ;
         }
 
@@ -52,31 +52,39 @@ namespace Application_Programming
             }
         }
 
-        public void GalleryAdd(String url)
+        public void showGallery()
+        
+        {
+            Console.WriteLine("list gallery:");
+            foreach (var VARIABLE in gallery)
+            
+            {
+             Console.WriteLine(VARIABLE);   
+            }
+        }
+        public void GalleryAdd()
         {
             if (gallery.Count < 2)
             {
+                Console.WriteLine("nhap vao mot image");
+                string url;
+                url = Console.ReadLine();
                 gallery.Add(url);
+                Console.WriteLine("Ban vua them thanh cong: " + url);
             }
+
             else
             {
-                for (var i = 0; i < 2; i++)
-                {
-                    Console.WriteLine(gallery[i]);
-                }
-                Console.WriteLine("chon file ban muon xoa");
+                Console.WriteLine("nhap vao hinh anh");
+                string str;
+                str = Console.ReadLine();
+                Console.WriteLine("qua so luong file cho phep");
+                Console.WriteLine("chon file ban muon xoa\n");
                 int number;
                 number = Convert.ToInt32(Console.ReadLine());
                 gallery.Remove(gallery[number]);
-                gallery.Add(url);
-
-
-
-
+                gallery.Add(str);
             }
         }
-        
-        
-        
     }
 }
