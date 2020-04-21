@@ -15,7 +15,7 @@ namespace Lab2
             Console.WriteLine("ban vua tao ra mot danh sach ");
         }
 
-        public Fashion(int id, string name, float price, int qty, string image, string desc, string color, int size) :
+        public Fashion(int id, string name, int price, int qty, string image, string desc, string color, int size) :
             base(id, name, price, qty, image, desc)
         {
             this.color = color;

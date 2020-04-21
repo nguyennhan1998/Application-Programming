@@ -47,7 +47,6 @@ namespace Lab2
         }
         static void NewCheck(List<Fashion> list,string color, int size)
         {
-            
             foreach (var i in list)
             {
                 if (i.Check(color,size))
@@ -55,11 +54,8 @@ namespace Lab2
                     Console.WriteLine("The product on stock");
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("off stock");
-                }
             }
+            
         }
     }
 }

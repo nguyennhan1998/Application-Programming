@@ -7,7 +7,7 @@ namespace Lab2
         private float weight;
         private float size;
 
-        public Diamond(int id, string name, float price, int qty, string image, string desc, float weight, float size) : base(id, name, price, qty, image, desc)
+        public Diamond(int id, string name, int price, int qty, string image, string desc, float weight, float size) : base(id, name, price, qty, image, desc)
         {
             this.weight = weight;
             this.size = size;

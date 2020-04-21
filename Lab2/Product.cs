@@ -7,7 +7,7 @@ namespace Lab2
     {
         private int id;
         private string name;
-        private float price;
+        private int price;
         private int qty;
         private string image;
         private string desc;
@@ -15,7 +15,7 @@ namespace Lab2
         
         
 
-        public Product(int id, string name, float price, int qty, string image, string desc)
+        public Product(int id, string name, int price, int qty, string image, string desc)
         {
             this.id = id;
             this.name = name;
