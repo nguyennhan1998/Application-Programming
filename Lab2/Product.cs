@@ -12,6 +12,8 @@ namespace Lab2
         private string image;
         private string desc;
         private List<string> gallery = new List<string>();
+        
+        
 
         public Product(int id, string name, float price, int qty, string image, string desc)
         {
@@ -22,6 +24,21 @@ namespace Lab2
             this.image = image;
             this.desc = desc;
         }
+
+        public int Id => id;
+
+        public string Name => name;
+
+        public float Price => price;
+
+        public int Qty => qty;
+
+        public string Image => image;
+
+        public string Desc => desc;
+
+        public List<string> Gallery => gallery;
+
 
         public Product()
         {
