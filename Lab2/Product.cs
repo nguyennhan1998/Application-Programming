@@ -29,7 +29,7 @@ namespace Lab2
 
         public string Name => name;
 
-        public float Price => price;
+        public int Price => price;
 
         public int Qty => qty;
 

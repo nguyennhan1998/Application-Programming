@@ -7,7 +7,7 @@ namespace Assignment3
 {
     internal class Program
     {
-        private static Cart cart = new Cart(1, "nhan", 12, "HaNoi", "vietNam");
+        private static Cart cart = new Cart(1, "nhan","Ha Noi", "Viet Nam");
 
         public static void Main(string[] args)
         {
@@ -30,6 +30,7 @@ namespace Assignment3
                         RemoveProduct();
                         break;
                     case 3: 
+                        cart.SetGrandTotal();
                         cart.PrintCart();
                         break;
                     case 4: 

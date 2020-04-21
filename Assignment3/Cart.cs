@@ -8,16 +8,16 @@ namespace Assignment3
     {
         private int id;
         private string customer;
-        private float grandTotal;
+        private int grandTotal;
         private string city;
         private string country;
         private List<Product> listproduct;
+        private int total=0;
 
-        public Cart(int id, string customer, float grandTotal, string city, string country)
+        public Cart(int id, string customer, string city, string country)
         {
             this.id = id;
             this.customer = customer;
-            this.grandTotal = grandTotal;
             this.city = city;
             this.country = country;
             this.listproduct = new List<Product>();
@@ -78,6 +78,7 @@ namespace Assignment3
             {
                 Console.WriteLine(listproduct[i].Id + ": " + listproduct[i].Name+" price "+ listproduct[i].Price+" Quantity "+ listproduct[i].Qty+" image"+ listproduct[i].Image);
             }
+            Console.WriteLine("your grand total : "+GetGrandTotal());
         }
 
         public Product QueryProduct(string name)
@@ -100,5 +101,45 @@ namespace Assignment3
 
             return null;
         }
+
+
+        public void SetGrandTotal()
+        {
+            int a=GetTotal();
+            if (this.country.Equals("Viet Nam"))
+            {
+                if (this.city.Equals("Ha Noi") || this.city.Equals("HCM"))
+                {
+                    grandTotal = a + (a * 1 / 100);
+                }
+                else
+                {
+                    grandTotal = a + (a * 2 / 100);
+                }
+                
+            }
+            else
+            {
+                grandTotal = a + (a * 5 / 100);
+            }
+            
+            
+        }
+
+        public int GetGrandTotal()
+        {
+            return grandTotal;
+        }
+        public int GetTotal()
+        {
+            for (int i = 0; i < listproduct.Count; i++)
+            {
+                var product = listproduct[i];
+                total += product.Price;
+            }
+
+            return total;
+        }
+
     }
 }
